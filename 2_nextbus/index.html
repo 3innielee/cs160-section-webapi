@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>jQuery UI Draggable - Default functionality</title>
+  <title>NextBus activity</title>
   
   <style></style>
 
@@ -10,8 +10,23 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   
   <script>
-    
-    /*edit this url*/
+    /*
+    Todo: Get arrival time prediction for AC Transit, 51B, stop “Durant Av & College Av” 
+    official doc: http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf
+
+    Lookup code name of bus agencies:
+    http://webservices.nextbus.com/service/publicJSONFeed?command=agencyList
+
+    Lookup code of routes:
+    http://webservices.nextbus.com/service/publicJSONFeed?command=routeList&a=<agency_tag>
+
+    Lookup stops: http://webservices.nextbus.com/service/publicJSONFeed?command=routeConfig&a=<agency_tag>&r=<route_tag>
+
+    */
+
+
+
+    /*you only need to edit this url*/
     var my_query_url="http://webservices.nextbus.com/service/publicJSONFeed?command={method_name}&a={agency_name}&{other parameters}";
 
     /*you don't need to change the code below*/
