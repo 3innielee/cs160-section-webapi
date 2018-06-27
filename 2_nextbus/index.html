@@ -10,9 +10,11 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   
   <script>
-  
-    var my_query_url="http://webservices.nextbus.com/service/publicJSONFeed?command=predictionsForMultiStops&a=actransit&stops=51B|0301740&stops=51B|0301980";
+    
+    /*edit this url*/
+    var my_query_url="http://webservices.nextbus.com/service/publicJSONFeed?command={method_name}&a={agency_name}&{other parameters}";
 
+    /*you don't need to change the code below*/
     $.getJSON(my_query_url, function(data){
         // console.log(data);
         for (var i = 0; i < data.predictions.length; i++){
