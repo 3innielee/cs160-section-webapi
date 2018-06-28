@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NextBus exercise</title>
+  
+  <style></style>
+
+  <!--includes jquery library-->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  
+  <script>
+  
+    var my_query_url="http://webservices.nextbus.com/service/publicJSONFeed?command=predictionsForMultiStops&a=actransit&stops=51B|0301740&stops=51B|0301980";
+
+    $.getJSON(my_query_url, function(data){
+        // console.log(data);
+        for (var i = 0; i < data.predictions.length; i++){
+            
+            var h1 = $("<h1>").text(data.predictions[i].agencyTitle+" - "+data.predictions[i].routeTag+" - "+data.predictions[i].stopTitle);
+            $("body").append(h1);
+
+            var times=data.predictions[i].direction.prediction;
+            for (var j=0;j<times.length;j++){
+                var p=$("<p>").text(times[j].minutes + " minutes");
+                $("body").append(p);
+            }
+        }
+    })
+
+
+
+  </script>
+</head>
+
+<body>
+ 
+</body>
+</html>
+
