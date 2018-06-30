@@ -1,2 +1,3 @@
 # cs160-section-webapi
-Exercise materials for CS160 summer 2018 at UCBerkeley
+These exercises are designed to introduce you to understand the fundamental concepts about web APIs and how to use them.
+
